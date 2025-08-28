@@ -73,7 +73,10 @@ body{
 .lightbox__close{
   position:absolute; top:14px; right:14px; border:0; width:40px; height:40px; border-radius:50%; cursor:pointer;
   background:#1f2536; color:var(--text); font-size:22px; line-height:40px; text-align:center; box-shadow:0 6px 20px rgba(0,0,0,.3);
+  outline:none; -webkit-tap-highlight-color: transparent;
 }
+.lightbox__close:focus, .lightbox__close:focus-visible{ outline:none !important; box-shadow:0 6px 20px rgba(0,0,0,.3); }
+.lightbox__close::-moz-focus-inner{ border:0; }
 .lightbox__nav{
   position:absolute; top:50%; transform:translateY(-50%); border:0; width:44px; height:44px; border-radius:50%; cursor:pointer;
   background:#1f2536; color:var(--text); font-size:26px; line-height:44px; text-align:center; opacity:.9;
