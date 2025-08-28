@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Photos de Cherbourg</title>
+  <meta name="description" content="Une petite galerie photo de Cherbourg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Photos de Cherbourg</h1>
+      <p class="subtitle">Une promenade visuelle — par Jean (et FASTNET)</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <div id="filters" class="filters" aria-label="Filtres de la galerie">
+      <button class="chip active" data-filter="all">Toutes</button>
+      <button class="chip" data-filter="fastnet">FASTNET</button>
+      <button class="chip" data-filter="jean">Jean</button>
+    </div>
+
+    <section id="gallery" class="gallery" aria-live="polite"></section>
+
+    <noscript>
+      <p>Activez JavaScript pour voir la galerie.</p>
+    </noscript>
+  </main>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Agrandissement de la photo" hidden>
+    <button class="lightbox__close" aria-label="Fermer">×</button>
+    <img id="lightbox-img" alt="Agrandissement" />
+    <div id="lightbox-caption" class="lightbox__caption"></div>
+    <button class="lightbox__nav prev" aria-label="Précédent">‹</button>
+    <button class="lightbox__nav next" aria-label="Suivant">›</button>
+  </div>
+
+  <footer class="site-footer container">
+    <p>© <span id="year"></span> — Cherbourg en images</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
